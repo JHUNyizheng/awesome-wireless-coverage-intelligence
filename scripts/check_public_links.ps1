@@ -22,6 +22,9 @@ try {
     "resources/monitoring_watchlist_20260606.md",
     "resources/reproducibility_scorecard.csv",
     "resources/publication_artifact_alignment.csv",
+    "resources/artifact_availability_ledger.csv",
+    "resources/artifact_index.md",
+    "resources/open_artifact_taxonomy.md",
     "resources/benchmark_performance_disclosure.csv"
   )
   $files += @(Get-ChildItem -Path "resources/cards" -Filter "*.md" -File -ErrorAction SilentlyContinue | ForEach-Object { $_.FullName })

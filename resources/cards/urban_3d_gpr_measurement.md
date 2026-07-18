@@ -9,6 +9,11 @@
 | Map target | Urban 3D RSRP radio map |
 | Dimensionality | Real UAV-measured urban 3D coverage with multiple height planes |
 | Artifact support | Published real-measurement scale and protocol evidence; public reproduction artifacts remain unverified |
+| Ledger record IDs | Pending integration; no public artifact record assigned |
+| Availability status | `unavailable` for public data and code |
+| License / version | Publisher DOI; artifact license not applicable |
+| Last verified | 2026-07-18 |
+| Reproduction scope | Protocol-bound measured UAV result card |
 | Recommended use | Real low-altitude measurement evidence and sim-to-real calibration discussion |
 | Caveat | The paper is important because it uses real UAV measurements, but it should not be treated as an open benchmark unless the measurement data, split policy, and reconstruction code become public or are supplied by the authors. |
 
@@ -21,11 +26,10 @@
   measurement masks and baselines.
 - Dataset, code, and license availability.
 
-## WCI Interpretation
+## Survey Interpretation
 
-This study is a useful counterweight to synthetic 3D benchmarks because it
-quantifies how ray-tracing output diverges from real UAV measurements and how
-few calibrated measurements can reduce reconstruction error. For WCI, the main
-lesson is not only the reported RMSE reduction, but the need to expose
+This study complements synthetic 3D benchmarks by quantifying divergence
+between ray tracing and real UAV measurements. It also shows how calibrated
+measurements can reduce reconstruction error. Interpretation requires the RMSE,
 measurement provenance, simulator mismatch, sampling geometry, and deployment
-cost before a map-estimation result can support low-altitude network decisions.
+cost before a map estimate can support low-altitude network decisions.

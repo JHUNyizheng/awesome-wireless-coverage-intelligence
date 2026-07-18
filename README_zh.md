@@ -2,9 +2,9 @@
 
 这是论文
 
-**From Radio Maps and Channel Knowledge Maps to Wireless Coverage Intelligence for 6G: Foundations, Construction, Applications, and Open Challenges**
+**Radio Maps and Channel Knowledge Maps for 6G Wireless Networks: A Survey of Construction, Applications, Evaluation, and Deployment**
 
-的中英双语配套资源项目，用于汇总无线电地图、无线电环境地图（REM）、频谱制图、信道知识地图（CKM）和无线覆盖智能（WCI）相关的公开数据集、代码、预训练模型、demo 以及复现注意事项。
+的中英双语 companion resource index，用于记录无线电地图、无线电环境地图（REM）、频谱制图和信道知识地图（CKM）相关的论文、数据集、代码、模型、演示及评估协议。本仓库只维护索引、元数据和复现说明，不镜像第三方材料。
 
 ## 快速入口
 
@@ -14,6 +14,9 @@
 - [代码仓库](resources/code.md)
 - [预训练模型与 demo](resources/models_and_demos.md)
 - [论文-artifact 对齐表](resources/publication_artifact_alignment.csv)
+- [机器可读开放材料台账](resources/artifact_availability_ledger.csv)
+- [按论文与材料类型浏览](resources/artifact_index.md)
+- [开放材料 taxonomy 与统计口径](resources/open_artifact_taxonomy.md)
 - [复现成熟度评分表](resources/reproducibility_scorecard.csv)
 - [公开基准性能披露表](resources/benchmark_performance_disclosure.csv)
 - [公开结果卡台账](resources/benchmark_result_card_ledger.md)
@@ -30,11 +33,11 @@
 ## 使用方式
 
 1. 先确认研究任务：2D 路径损耗预测、稀疏 REM 重建、3D/低空无线覆盖、动态地图预测、CKM 构建，还是下游 WCI 通信效用。
-2. 再查看复现成熟度评分表。只有公开数据但没有代码、固定划分或 checkpoint 的资源，不应被视为完整可复现。
+2. 再查看开放材料台账。链接可访问不能直接证明存在开放许可证、固定版本或可执行复现路径。
 3. 比较论文精度前，先查看公开基准性能披露表。RMSE、MAE、NMSE、SSIM、beam accuracy 和任务指标必须结合 split、采样掩膜、地图分辨率、频段、高度和任务定义解释。
 4. 记录论文原始精度或本地复现实验时，使用公开结果卡台账，把数值和协议、artifact 状态绑定在一起。
 5. 对 3D/低空方向，优先核查高度、轨迹、频段、城市/场景划分和下游通信任务，而不是把所有结果压缩成一个二维 RMSE 排名。
-6. 本项目只提供资源索引和教程，不重新分发第三方数据集、代码或模型权重。
+6. 本项目只提供资源索引、元数据和教程，不重新分发第三方论文、数据集、代码或模型权重。
 
 ## 本地检查
 
@@ -93,6 +96,8 @@ powershell -ExecutionPolicy Bypass -File scripts/build_release_bundle.ps1
 - 下游任务脚本
 
 该评分不是论文质量排名，而是判断其他研究者能否获得复现、压力测试或复用所需的 artifact。
+
+统一状态为 `open`、`restricted`、`unavailable`、`link-broken` 和 `unclear-license`。公开下载但无明确许可证的材料标记为 `unclear-license`。状态描述核验日期当日的可用性，不评价论文技术质量。
 
 ## 贡献
 

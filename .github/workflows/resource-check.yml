@@ -22,6 +22,10 @@ jobs:
         shell: pwsh
         run: ./scripts/check_public_links.ps1
 
+      - name: Build and validate release bundle
+        shell: pwsh
+        run: ./scripts/build_release_bundle.ps1 -SkipPublicLinkCheck
+
       - name: Upload link-check report
         uses: actions/upload-artifact@v4
         if: always()
@@ -30,3 +34,12 @@ jobs:
           path: |
             resources/link_check_latest.csv
             resources/link_check_latest.md
+
+      - name: Upload validated release bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: companion-release-bundle
+          path: |
+            dist/awesome-wireless-coverage-intelligence-release.zip
+            dist/release_bundle_validation_latest.md
+            dist/release_bundle_validation_latest.json

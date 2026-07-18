@@ -2,17 +2,18 @@
 
 A bilingual companion resource index for the survey:
 
-**From Radio Maps and Channel Knowledge Maps to Wireless Coverage Intelligence for 6G: Foundations, Construction, Applications, and Open Challenges**
+**Radio Maps and Channel Knowledge Maps for 6G Wireless Networks: A Survey of Construction, Applications, Evaluation, and Deployment**
 
-This repository collects public datasets, codebases, pretrained-model or demo resources, and reproducibility notes for radio maps, radio environment maps (REMs), spectrum cartography, channel knowledge maps (CKMs), and wireless coverage intelligence (WCI).
+This repository is the public companion index for radio maps, radio environment maps (REMs), spectrum cartography, and channel knowledge maps (CKMs). It records papers, datasets, code, models, demos, and evaluation protocols without mirroring third-party content.
 
 ## Survey Revision Alignment
 
-The companion index is maintained around the three evidence axes emphasized in the IEEE CST survey revision:
+The companion index follows the evidence structure used in the IEEE CST survey revision:
 
-- **3D and low-altitude wireless coverage:** resources are separated from 2D pathloss benchmarks when height, trajectory, UAV, multiband, or volumetric protocols change the interpretation of accuracy.
-- **Artifact maturity:** each resource is tracked across dataset persistence, executable code, pretrained checkpoints, demos/apps, fixed splits, license/provenance metadata, and downstream-task scripts.
-- **Disclosed performance versus network utility:** benchmark numbers are recorded with their protocol fields so RMSE, NMSE, SSIM, MAE, beam accuracy, or task scores are not compared across incompatible datasets or claims.
+- **Technical evidence:** construction methods and communication applications are compared under their stated map targets, data regimes, and assumptions.
+- **Protocol-bound results:** disclosed numbers retain their split, sampling mask, normalization, frequency, height, and task context.
+- **Artifact availability:** paper, dataset, code, model, demo/API, and evaluation-protocol records use conservative status and license fields.
+- **Separated denominators:** paper-level linkage, artifact-level availability, and benchmark-level reproduction maturity are reported independently.
 
 ## Quick Navigation
 
@@ -22,6 +23,9 @@ The companion index is maintained around the three evidence axes emphasized in t
 - [Code repositories](resources/code.md)
 - [Pretrained models and demos](resources/models_and_demos.md)
 - [Publication-artifact alignment](resources/publication_artifact_alignment.csv)
+- [Machine-readable artifact ledger](resources/artifact_availability_ledger.csv)
+- [Artifact browser by paper and material type](resources/artifact_index.md)
+- [Open-artifact taxonomy and counting rules](resources/open_artifact_taxonomy.md)
 - [Reproducibility scorecard](resources/reproducibility_scorecard.csv)
 - [Benchmark-performance disclosure table](resources/benchmark_performance_disclosure.csv)
 - [Benchmark result-card ledger](resources/benchmark_result_card_ledger.md)
@@ -38,11 +42,11 @@ The companion index is maintained around the three evidence axes emphasized in t
 ## How To Use This Repository
 
 1. Start with the dataset page and identify whether your task is 2D pathloss prediction, sparse REM reconstruction, 3D/low-altitude mapping, dynamic forecasting, or CKM construction.
-2. Check the reproducibility scorecard before planning experiments. A resource with public data but no code, fixed split, or checkpoint should not be treated as fully reproducible.
+2. Check the artifact ledger before planning experiments. A reachable URL does not establish an open license, fixed version, or executable reproduction path.
 3. Read the benchmark-performance disclosure table before comparing reported accuracy. RMSE, MAE, NMSE, SSIM, beam accuracy, and task metrics are only meaningful with the corresponding split, sampling mask, map resolution, frequency, height, and task definition.
 4. Use the benchmark result-card ledger when recording numerical results from published papers or local reproductions.
 5. Translate any reconstruction score into a network claim only after identifying the downstream decision: beam/RIS control, UAV routing, coverage repair, localization/ISAC, or semantic protection.
-6. Use the tutorials as a lightweight workflow guide. This repository does not redistribute third-party datasets, code, or model weights.
+6. Use the tutorials as a lightweight workflow guide. The repository links to canonical hosts and does not redistribute third-party papers, datasets, code, or model weights.
 
 ## Local Checks
 
@@ -96,6 +100,8 @@ Resources are described along seven artifact dimensions:
 - Downstream task scripts
 
 The scorecard is not a scientific ranking. It asks whether another group can obtain the artifacts needed to reproduce, stress-test, or reuse a published or community resource.
+
+Availability states are `open`, `restricted`, `unavailable`, `link-broken`, and `unclear-license`. Public downloads without explicit license evidence remain `unclear-license`. The status describes access at the recorded verification date and does not grade technical merit.
 
 ## Contributing
 

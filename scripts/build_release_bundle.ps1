@@ -71,7 +71,7 @@ $summary = [pscustomobject]@{
 $summary | ConvertTo-Json -Depth 5 | Out-File -FilePath (Join-Path $staging "RELEASE_BUNDLE_SUMMARY.json") -Encoding UTF8
 
 $readme = @"
-# Awesome Wireless Coverage Intelligence Release Bundle
+# Radio Maps and Channel Knowledge Maps Companion Release Bundle
 
 Generated: $(Get-Date -Format "yyyy-MM-dd HH:mm:ss")
 
@@ -84,9 +84,9 @@ archival handoff when a GitHub remote is not yet configured.
 - Repository name: 'awesome-wireless-coverage-intelligence'
 - Suggested visibility: public, unless the author team decides to keep it
   private until revision or acceptance.
-- Suggested description: Curated datasets, code, pretrained-model, demo, and
-  benchmark-disclosure resources for wireless coverage intelligence, radio
-  maps, REM, CKM, and low-altitude 3D coverage research.
+- Suggested description: Companion index of papers, datasets, code, models,
+  demos, evaluation protocols, and benchmark disclosures for radio maps and
+  channel knowledge maps in 6G.
 
 ## Contents
 
