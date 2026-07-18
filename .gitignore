@@ -1,0 +1,12 @@
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+__pycache__/
+.ipynb_checkpoints/
+data/
+datasets/
+checkpoints/
+weights/
+third_party/
+dist/

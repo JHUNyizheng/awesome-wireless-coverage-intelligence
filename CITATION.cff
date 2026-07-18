@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "Awesome Wireless Coverage Intelligence"
+message: "If you use this resource index, please cite the companion survey once the final bibliographic metadata is available."
+type: dataset
+authors:
+  - name: "Wireless Coverage Intelligence Survey Team"
+abstract: "A bilingual companion resource index for radio maps, radio environment maps, spectrum cartography, channel knowledge maps, wireless coverage intelligence, 3D/low-altitude coverage, and open-source reproducibility."
+keywords:
+  - radio map
+  - radio environment map
+  - spectrum cartography
+  - channel knowledge map
+  - wireless coverage intelligence
+  - 6G
+  - reproducibility
+license: CC-BY-4.0
+repository-code: "https://github.com/JHUNyizheng/awesome-wireless-coverage-intelligence"
+version: "0.1.0"
+date-released: 2026-07-18

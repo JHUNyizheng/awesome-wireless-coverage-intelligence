@@ -1,0 +1,56 @@
+name: Resource submission
+description: Suggest a dataset, codebase, pretrained model, demo, tutorial, or index for the WCI resource list.
+title: "[Resource]: "
+labels: ["resource", "triage"]
+body:
+  - type: input
+    id: resource_name
+    attributes:
+      label: Resource name
+      description: Name of the dataset, codebase, model, demo, tutorial, or index.
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Public URL
+      description: Link to the official project page, repository, DOI page, Zenodo/OpenAIRE record, IEEE DataPort page, or Hugging Face page.
+    validations:
+      required: true
+  - type: input
+    id: paper
+    attributes:
+      label: Related paper or preprint
+      description: DOI, arXiv, IEEE Xplore, journal page, or citation if available.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Publication category
+      options:
+        - published
+        - foundation-toolchain
+        - preprint
+        - resource-first
+        - community-index
+        - unknown
+    validations:
+      required: true
+  - type: checkboxes
+    id: artifact_support
+    attributes:
+      label: Artifact support
+      options:
+        - label: Dataset is public
+        - label: Code is public
+        - label: Pretrained model/checkpoint is public
+        - label: Demo or app is public
+        - label: Fixed split or preprocessing is public
+        - label: License/provenance metadata is clear
+        - label: Downstream-task script is public
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes and caveats
+      description: Include map target, dimensionality, metrics, split protocol, and known limitations.
+    validations:
+      required: true

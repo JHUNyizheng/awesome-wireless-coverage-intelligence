@@ -1,0 +1,32 @@
+name: resource-check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  validate-resource-index:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check resource structure
+        shell: pwsh
+        run: ./scripts/check_resources.ps1
+
+      - name: Check public links
+        shell: pwsh
+        run: ./scripts/check_public_links.ps1
+
+      - name: Upload link-check report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: public-link-check
+          path: |
+            resources/link_check_latest.csv
+            resources/link_check_latest.md

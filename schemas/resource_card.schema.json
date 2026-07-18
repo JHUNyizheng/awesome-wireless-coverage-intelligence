@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/wci-resource-card.schema.json",
+  "title": "Wireless Coverage Intelligence Resource Card",
+  "type": "object",
+  "required": [
+    "name",
+    "url",
+    "resource_type",
+    "publication_category",
+    "map_target",
+    "dimensionality",
+    "artifact_support",
+    "recommended_use",
+    "caveat"
+  ],
+  "properties": {
+    "name": { "type": "string" },
+    "url": { "type": "string", "format": "uri" },
+    "paper_or_project": { "type": "string" },
+    "resource_type": {
+      "type": "array",
+      "items": {
+        "enum": ["dataset", "code", "model", "demo", "toolchain", "index", "tutorial"]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "publication_category": {
+      "enum": ["published", "foundation-toolchain", "preprint", "resource-first", "community-index", "unknown"]
+    },
+    "map_target": {
+      "type": "array",
+      "items": {
+        "enum": ["pathloss", "RSS", "RSRP", "SINR", "REM", "spectrum", "CKM", "beam", "delay", "angle", "LoS", "uncertainty", "freshness", "task-utility"]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "dimensionality": {
+      "type": "array",
+      "items": {
+        "enum": ["2D", "2.5D", "height-aware-3D", "volumetric-3D", "3D-by-3D", "multiband", "dynamic", "low-altitude", "indoor", "outdoor"]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "artifact_support": {
+      "type": "object",
+      "required": ["dataset", "code", "pretrained_models", "demo_or_app", "fixed_splits", "license_or_provenance", "downstream_scripts"],
+      "properties": {
+        "dataset": { "enum": ["yes", "partial", "linked", "no", "not-applicable"] },
+        "code": { "enum": ["yes", "partial", "linked", "no", "not-applicable"] },
+        "pretrained_models": { "enum": ["yes", "partial", "request-based", "no", "not-applicable"] },
+        "demo_or_app": { "enum": ["yes", "partial", "linked", "no", "not-applicable"] },
+        "fixed_splits": { "enum": ["yes", "partial", "no", "not-applicable"] },
+        "license_or_provenance": { "enum": ["strong", "partial", "weak", "unknown"] },
+        "downstream_scripts": { "enum": ["yes", "partial", "no", "not-applicable"] }
+      },
+      "additionalProperties": false
+    },
+    "recommended_use": { "type": "string" },
+    "caveat": { "type": "string" },
+    "last_checked": { "type": "string", "format": "date" }
+  },
+  "additionalProperties": false
+}

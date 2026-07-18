@@ -1,0 +1,64 @@
+﻿{
+    "generated_at":  "2026-06-18 15:51:00",
+    "pass":  6,
+    "review":  2,
+    "open":  3,
+    "strict":  false,
+    "checks":  [
+                   {
+                       "name":  "Git repository",
+                       "status":  "PASS",
+                       "detail":  "Folder is a Git work tree."
+                   },
+                   {
+                       "name":  "Git user.name",
+                       "status":  "OPEN",
+                       "detail":  "Missing local Git user.name."
+                   },
+                   {
+                       "name":  "Git user.email",
+                       "status":  "OPEN",
+                       "detail":  "Missing local Git user.email."
+                   },
+                   {
+                       "name":  "Git remote",
+                       "status":  "OPEN",
+                       "detail":  "No remote configured."
+                   },
+                   {
+                       "name":  "GitHub CLI",
+                       "status":  "REVIEW",
+                       "detail":  "gh is not installed; use the manual GitHub remote workflow or install/authenticate gh before CreateRemoteWithGh."
+                   },
+                   {
+                       "name":  "Git working tree",
+                       "status":  "REVIEW",
+                       "detail":  "13 uncommitted or untracked entries; this is expected before the initial commit."
+                   },
+                   {
+                       "name":  "Required publication files",
+                       "status":  "PASS",
+                       "detail":  "16 required files found; publication/deferral decision record signals present."
+                   },
+                   {
+                       "name":  "Resource structural check",
+                       "status":  "PASS",
+                       "detail":  "PASS required_files=26 relative_links=38 resource_cards=11 resources/reproducibility_scorecard.csv=21 resources/publication_artifact_alignment.csv=18 resources/benchmark_performance_disclosure.csv=10 benchmark_result_card_signals=9"
+                   },
+                   {
+                       "name":  "Public-link review",
+                       "status":  "PASS",
+                       "detail":  "19 public links; all automated checks OK."
+                   },
+                   {
+                       "name":  "Publication helper dry-run",
+                       "status":  "PASS",
+                       "detail":  "scripts/publish_to_github.ps1 completed a no-write dry run with placeholder owner and Git identity."
+                   },
+                   {
+                       "name":  "Release bundle dry-run",
+                       "status":  "PASS",
+                       "detail":  "scripts/build_release_bundle.ps1 produced and validated a local ZIP bundle for manual GitHub publication."
+                   }
+               ]
+}

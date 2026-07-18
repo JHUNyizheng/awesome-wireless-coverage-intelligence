@@ -1,0 +1,22 @@
+Resource,PublicationLinkage,Dataset,Code,Models,Demos,SplitsPreprocessing,LicenseProvenance,DownstreamUtility,Note
+RadioMapSeer + IEEE DataPort,Published,Strong,Linked,Weak,Weak,Partial,Strong,Partial,Strong dataset benchmark; model reproduction depends on companion code lines such as RadioUNet.
+RadioUNet,Published,External,Strong,Weak,Weak,Partial,Partial,Partial,Good code and notebook support over RadioMapSeer-style data.
+DeepMIMO,Foundation,Strong,Strong,N/A,Partial,Strong,Strong,Partial,Strong reusable channel-data platform rather than a single pretrained WCI model.
+DeepREM,Published,Strong,Partial,Strong,Strong,Partial,Strong,Partial,One of the stronger examples because dataset, trained models, and app support are visible.
+SpectrumNet / FDRadiomap,Published,Strong,Weak,Weak,Weak,Partial,Partial,Weak,Useful dataset distribution; executable replication package is thinner.
+UrbanRadio3D / RadioDiff-3D,Published,Strong,Linked,Weak,Weak,Strong,Strong,Weak,Strong 3D dataset and split support; standalone checkpoints not observed.
+RadioDiff,Published,External,Strong,Partial,Weak,Partial,Partial,Partial,Strong code family; pretrained weights appear request-based rather than open download.
+RadioMapMotion,Published,Strong,Strong,Weak,Weak,Strong,Partial,Partial,Good dynamic-map dataset and train/test workflow.
+3DiRM3200 / R2Net,Published,Strong,Strong,Partial,Weak,Partial,Partial,Weak,Good 3D dataset/code; model support is partial.
+CKMImageNet,Published,Strong,Weak,Weak,Weak,Partial,Partial,Weak,Important CKM dataset; code/model stack is limited in the audited release.
+Grid-Free Radio Map Estimation,Published artifact claim unavailable,Unconfirmed,Unconfirmed,N/A,Weak,Unconfirmed,Unconfirmed,Weak,Previously recorded repository returned 404 in the 2026-06-06 public-link audit; keep as a literature pointer until a replacement artifact is verified.
+RMDirectionalBerlin,Preprint,Strong,Linked,Weak,Weak,Partial,Strong,Weak,Strong open dataset candidate; journal status not confirmed.
+MobiSim RadioMap,Resource-first,Strong,Weak,Weak,Weak,Partial,Partial,Weak,Useful Hugging Face dataset but not yet a peer-reviewed final paper.
+Multi-config Radiomap Dataset,Preprint/resource-first,Strong,Strong,Strong,Partial,Strong,Partial,Partial,Strong artifact stack; final publication metadata pending.
+Real-world CKM-Dataset,Preprint/resource-first,Partial,Weak,Weak,Weak,Partial,Partial,Weak,Promising real-world CKM release, but currently partial.
+Environment_Aware_Communications,Tutorial-lineage code,Partial,Strong,Weak,Partial,Partial,Partial,Partial,Useful CKM examples; not packaged as a single benchmark artifact.
+Channel-Knowledge-Map-,CKM simulation code,Weak,Partial,Weak,Weak,Weak,Weak,Weak,Helpful scripts, but weak documentation and publication metadata.
+Awesome-Radio-Map-Categorized,Community index unavailable,N/A,N/A,N/A,N/A,N/A,Unconfirmed,N/A,Previously recorded repository returned 404 in the 2026-06-06 public-link audit; do not treat as a usable discovery source until reverified.
+RadioLAM,Published,External,Strong,Weak,Weak,Partial,Partial,Weak,Public code is visible and uses SpectrumNet instructions; release/checkpoint and exact replay provenance remain unresolved.
+REM-Net+,Published,External,Unverified,Weak,Weak,Unverified,Strong,Weak,Journal-backed RadioMap3DSeer result card; public executable reproduction artifacts were not verified in the current audit.
+High-Efficiency Urban 3D GPR Measurement Study,Published,Unverified,Unverified,N/A,Weak,Unverified,Strong,Partial,Important real UAV measurement evidence; public measurement dataset and code were not verified in the current audit.

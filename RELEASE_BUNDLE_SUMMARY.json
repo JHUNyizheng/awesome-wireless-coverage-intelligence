@@ -1,0 +1,25 @@
+﻿{
+    "generated_at":  "2026-06-18 15:51:17",
+    "package_name":  "awesome-wireless-coverage-intelligence-release",
+    "copied_files":  47,
+    "missing_files":  0,
+    "skip_public_link_check":  true,
+    "excluded_directories":  [
+                                 ".git",
+                                 "dist",
+                                 "data",
+                                 "datasets",
+                                 "checkpoints",
+                                 "weights",
+                                 "third_party",
+                                 "__pycache__",
+                                 ".ipynb_checkpoints"
+                             ],
+    "excluded_files":  [
+                           ".DS_Store",
+                           "Thumbs.db",
+                           "publication_decision_snapshot_latest.md",
+                           "publication_decision_snapshot_latest.json"
+                       ],
+    "zip_path":  "dist\\awesome-wireless-coverage-intelligence-release.zip"
+}
