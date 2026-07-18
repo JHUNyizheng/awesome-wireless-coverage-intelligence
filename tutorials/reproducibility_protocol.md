@@ -28,6 +28,12 @@ Before running experiments, record:
 - Metric implementation and reporting unit.
 - Hardware assumptions and random seeds.
 
+Record each material in `resources/artifact_availability_ledger.csv` with its
+canonical URL, availability state, license, version or commit, verification
+date, and reproduction scope. Use `open` only when access and reuse permission
+are both verified. Keep paper-level, artifact-level, and benchmark-level counts
+as separate summaries.
+
 ## 3. Reconstruct The Original Protocol
 
 Do not start by changing models. First reconstruct the published protocol:

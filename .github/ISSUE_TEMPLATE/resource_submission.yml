@@ -35,6 +35,47 @@ body:
         - unknown
     validations:
       required: true
+  - type: dropdown
+    id: availability_status
+    attributes:
+      label: Availability status
+      description: Use a conservative status based on the canonical source.
+      options:
+        - open
+        - restricted
+        - unavailable
+        - link-broken
+        - unclear-license
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: License evidence
+      description: SPDX identifier, canonical license URL, or a clear statement that no license was found.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Release, tag, commit, dataset version, or persistent-record version.
+    validations:
+      required: true
+  - type: input
+    id: last_verified
+    attributes:
+      label: Last verified
+      description: Verification date in YYYY-MM-DD format.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction_scope
+    attributes:
+      label: Reproduction scope
+      description: State which claims, data splits, metrics, inference paths, or task scripts the public material supports.
+    validations:
+      required: true
   - type: checkboxes
     id: artifact_support
     attributes:

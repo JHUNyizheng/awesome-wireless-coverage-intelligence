@@ -14,6 +14,9 @@ Please include:
 - Map target: radio map, REM, spectrum map, CKM, or WCI
 - Dimensionality: 2D, 3D, multiband, dynamic, low-altitude, indoor, or outdoor
 - Artifact support: data, code, checkpoints, demo/app, fixed splits, license/provenance, downstream task scripts
+- Canonical URL or persistent identifier
+- Availability status: open, restricted, unavailable, link-broken, or unclear-license
+- License evidence, version or commit, last verification date, and reproduction scope
 - Known limitations and recommended use
 
 ## What Not To Submit
@@ -27,7 +30,7 @@ Do not upload:
 
 ## Review Criteria
 
-Resources are accepted when they are relevant to radio maps, REMs, spectrum cartography, CKMs, or WCI and when the artifact status can be described clearly. A resource can be useful even if it is incomplete; incomplete resources should be labeled honestly rather than excluded silently.
+Resources are accepted when they are relevant to radio maps, REMs, spectrum cartography, or CKMs and when the artifact status can be described clearly. A resource can be useful when incomplete; incomplete releases receive a conservative status and an explicit caveat.
 
 Before submitting a pull request, run:
 

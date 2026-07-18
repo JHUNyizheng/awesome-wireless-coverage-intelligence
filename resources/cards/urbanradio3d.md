@@ -8,6 +8,11 @@
 | Map target | 3D urban pathloss/radio maps |
 | Dimensionality | Volumetric 3D; 3D-by-3D urban coverage |
 | Artifact support | Dataset folders, recommended splits, MIT license, cloud links, and RadioDiff-family code linkage |
+| Ledger record IDs | `UR3D-DATA`; `UR3D-SPLIT`; related code/model: `RDIFF-CODE`, `RDIFF-MODEL` |
+| Availability status | Dataset and split `open`; code `unclear-license`; weights `restricted` |
+| License / version | MIT dataset; repository release and recommended splits |
+| Last verified | 2026-07-18 |
+| Reproduction scope | Volumetric maps, train/test partition, training, and checkpoint-assisted inference |
 | Recommended use | 3D urban radio-map generation and RadioDiff-3D style benchmarking |
 | Caveat | Simulator-backed volumetric evidence should not be read as real low-altitude measurement transfer without additional validation. |
 
@@ -19,9 +24,7 @@
 - Whether 3D descriptors are input, output, or both.
 - Whether evaluation is reconstruction-only or paired with a communication task.
 
-## WCI Interpretation
+## Survey Interpretation
 
-UrbanRadio3D is central for moving beyond 2D radio-map prediction. In WCI terms,
-it supports 3D map-construction claims, while uncertainty, freshness, and
-downstream control still require explicit evaluation.
-
+UrbanRadio3D supports the transition from 2D prediction to 3D map construction.
+Uncertainty, freshness, and downstream control still require explicit evaluation.

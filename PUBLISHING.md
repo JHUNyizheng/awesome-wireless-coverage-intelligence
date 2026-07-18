@@ -128,9 +128,8 @@ powershell -ExecutionPolicy Bypass -File scripts/publish_to_github.ps1 `
 
 ## Suggested Repository Description
 
-Curated datasets, code, pretrained-model, demo, and benchmark-disclosure
-resources for wireless coverage intelligence, radio maps, REM, CKM, and
-low-altitude 3D coverage research.
+Companion index of papers, datasets, code, models, demos, evaluation protocols,
+and benchmark disclosures for radio maps and channel knowledge maps in 6G.
 
 ## Suggested Topics
 
@@ -145,6 +144,7 @@ Before the first public release, run:
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts/check_public_links.ps1
 powershell -ExecutionPolicy Bypass -File scripts/check_resources.ps1
+powershell -ExecutionPolicy Bypass -File scripts/check_release_bundle.ps1
 powershell -ExecutionPolicy Bypass -File scripts/check_publish_readiness.ps1
 powershell -ExecutionPolicy Bypass -File scripts/build_release_bundle.ps1
 powershell -ExecutionPolicy Bypass -File scripts/publish_to_github.ps1 -DryRun -SkipPublicLinkCheck -Owner JHUNyizheng -UserName "<your name>" -UserEmail "<your email>"

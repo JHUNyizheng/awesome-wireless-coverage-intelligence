@@ -1,27 +1,33 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.org/wci-resource-card.schema.json",
-  "title": "Wireless Coverage Intelligence Resource Card",
+  "$id": "https://raw.githubusercontent.com/JHUNyizheng/awesome-wireless-coverage-intelligence/main/schemas/resource_card.schema.json",
+  "title": "Radio Map and CKM Open-Artifact Resource Card",
   "type": "object",
   "required": [
     "name",
-    "url",
+    "canonical_url",
     "resource_type",
     "publication_category",
     "map_target",
     "dimensionality",
     "artifact_support",
+    "availability_status",
+    "license",
+    "version_or_commit",
+    "last_verified",
+    "reproduction_scope",
     "recommended_use",
     "caveat"
   ],
   "properties": {
     "name": { "type": "string" },
-    "url": { "type": "string", "format": "uri" },
+    "canonical_url": { "type": "string", "format": "uri" },
+    "url": { "type": "string", "format": "uri", "deprecated": true },
     "paper_or_project": { "type": "string" },
     "resource_type": {
       "type": "array",
       "items": {
-        "enum": ["dataset", "code", "model", "demo", "toolchain", "index", "tutorial"]
+        "enum": ["paper", "dataset", "code", "model", "demo", "api", "evaluation-protocol", "toolchain", "index", "tutorial"]
       },
       "minItems": 1,
       "uniqueItems": true
@@ -59,9 +65,17 @@
       },
       "additionalProperties": false
     },
+    "availability_status": {
+      "enum": ["open", "restricted", "unavailable", "link-broken", "unclear-license"]
+    },
+    "license": { "type": "string", "minLength": 1 },
+    "version_or_commit": { "type": "string", "minLength": 1 },
+    "last_verified": { "type": "string", "format": "date" },
+    "reproduction_scope": { "type": "string", "minLength": 1 },
+    "verification_note": { "type": "string" },
     "recommended_use": { "type": "string" },
     "caveat": { "type": "string" },
-    "last_checked": { "type": "string", "format": "date" }
+    "last_checked": { "type": "string", "format": "date", "deprecated": true }
   },
   "additionalProperties": false
 }

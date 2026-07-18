@@ -1,16 +1,16 @@
 cff-version: 1.2.0
-title: "Awesome Wireless Coverage Intelligence"
-message: "If you use this resource index, please cite the companion survey once the final bibliographic metadata is available."
+title: "Radio Maps and Channel Knowledge Maps for 6G: Companion Resource Index"
+message: "If you use this resource index, please cite the companion IEEE Communications Surveys & Tutorials survey once final bibliographic metadata is available."
 type: dataset
 authors:
   - name: "Wireless Coverage Intelligence Survey Team"
-abstract: "A bilingual companion resource index for radio maps, radio environment maps, spectrum cartography, channel knowledge maps, wireless coverage intelligence, 3D/low-altitude coverage, and open-source reproducibility."
+abstract: "A bilingual companion index for radio maps, radio environment maps, spectrum cartography, channel knowledge maps, benchmark protocols, and open research artifacts."
 keywords:
   - radio map
   - radio environment map
   - spectrum cartography
   - channel knowledge map
-  - wireless coverage intelligence
+  - open research artifacts
   - 6G
   - reproducibility
 license: CC-BY-4.0

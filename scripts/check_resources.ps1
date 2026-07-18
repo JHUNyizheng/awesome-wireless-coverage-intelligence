@@ -20,6 +20,9 @@ try {
     "resources/benchmark_performance_disclosure.csv",
     "resources/benchmark_result_card_ledger.md",
     "resources/publication_artifact_alignment.csv",
+    "resources/artifact_availability_ledger.csv",
+    "resources/artifact_index.md",
+    "resources/open_artifact_taxonomy.md",
     "resources/source_verification_20260604.md",
     "resources/monitoring_watchlist_20260606.md",
     "resources/publication_closure_packet_20260606.md",
@@ -46,6 +49,67 @@ try {
     "resources/reproducibility_scorecard.csv" = 18
     "resources/benchmark_performance_disclosure.csv" = 10
     "resources/publication_artifact_alignment.csv" = 18
+    "resources/artifact_availability_ledger.csv" = 31
+  }
+
+  $artifactLedgerPath = "resources/artifact_availability_ledger.csv"
+  if (Test-Path $artifactLedgerPath) {
+    $artifactRows = @(Import-Csv $artifactLedgerPath)
+    $requiredColumns = @(
+      "record_id", "resource", "linked_work", "artifact_type", "canonical_url",
+      "status", "license", "version_or_commit", "last_verified",
+      "reproduction_scope", "verification_note"
+    )
+    $actualColumns = @($artifactRows[0].PSObject.Properties.Name)
+    foreach ($column in $requiredColumns) {
+      if ($actualColumns -notcontains $column) {
+        $issues.Add("$artifactLedgerPath missing column: $column")
+      }
+    }
+    $allowedStatuses = @("open", "restricted", "unavailable", "link-broken", "unclear-license")
+    $duplicateIds = @($artifactRows | Group-Object record_id | Where-Object { $_.Count -gt 1 })
+    foreach ($duplicate in $duplicateIds) {
+      $issues.Add("$artifactLedgerPath has duplicate record_id: $($duplicate.Name)")
+    }
+    foreach ($row in $artifactRows) {
+      if ($allowedStatuses -notcontains $row.status) {
+        $issues.Add("$artifactLedgerPath has invalid status for $($row.record_id): $($row.status)")
+      }
+      if ($row.canonical_url -notmatch '^https://') {
+        $issues.Add("$artifactLedgerPath requires an HTTPS canonical_url for $($row.record_id)")
+      }
+      if ($row.last_verified -notmatch '^\d{4}-\d{2}-\d{2}$') {
+        $issues.Add("$artifactLedgerPath has invalid last_verified for $($row.record_id)")
+      }
+      foreach ($field in @("license", "version_or_commit", "reproduction_scope", "verification_note")) {
+        if ([string]::IsNullOrWhiteSpace($row.$field)) {
+          $issues.Add("$artifactLedgerPath has an empty $field for $($row.record_id)")
+        }
+      }
+    }
+  }
+
+  $schemaPath = "schemas/resource_card.schema.json"
+  if (Test-Path $schemaPath) {
+    try {
+      $schema = Get-Content -Path $schemaPath -Raw -Encoding UTF8 | ConvertFrom-Json
+      foreach ($field in @("availability_status", "license", "version_or_commit", "last_verified", "reproduction_scope")) {
+        if ($schema.required -notcontains $field) {
+          $issues.Add("$schemaPath does not require field: $field")
+        }
+      }
+    } catch {
+      $issues.Add("$schemaPath is not valid JSON: $($_.Exception.Message)")
+    }
+  }
+
+  $readmeText = Get-Content -Path "README.md" -Raw -Encoding UTF8
+  $surveyTitle = "Radio Maps and Channel Knowledge Maps for 6G Wireless Networks: A Survey of Construction, Applications, Evaluation, and Deployment"
+  if (-not $readmeText.Contains($surveyTitle)) {
+    $issues.Add("README.md does not contain the current survey title")
+  }
+  if ($readmeText.Contains("From Radio Maps and Channel Knowledge Maps to Wireless Coverage Intelligence for 6G")) {
+    $issues.Add("README.md contains the retired survey title")
   }
   foreach ($entry in $csvExpectations.GetEnumerator()) {
     if (Test-Path $entry.Key) {

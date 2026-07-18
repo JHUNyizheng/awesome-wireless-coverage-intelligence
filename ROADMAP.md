@@ -1,6 +1,6 @@
 # Roadmap
 
-This roadmap keeps the companion project aligned with the WCI survey without
+This roadmap keeps the companion project aligned with the radio-map and CKM survey without
 turning the repository into a mirror of third-party datasets or paper text.
 
 ## Near-Term
@@ -14,13 +14,15 @@ turning the repository into a mirror of third-party datasets or paper text.
   evidence.
 - Refresh `resources/link_check_latest.*` before public release or major survey
   revisions.
+- Preserve paper-level, artifact-level, and benchmark-level counts as separate
+  views of the evidence base.
 
 ## Medium-Term
 
 - Add reproducibility cards for common baselines on RadioMapSeer, DeepREM,
   UrbanRadio3D, RadioMapMotion, 3DiRM3200, and CKMImageNet.
-- Convert selected resource cards into machine-readable metadata after the schema
-  stabilizes.
+- Convert all representative resource cards into schema-valid machine-readable
+  metadata with status, license, version, verification date, and scope fields.
 - Add a small benchmark-protocol notebook that demonstrates how to compare
   metrics only after split, mask, frequency, height, and task definitions align.
 - Expand the GitHub Actions maintenance workflow with optional schema validation

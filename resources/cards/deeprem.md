@@ -8,6 +8,11 @@
 | Map target | Sparse-measurement RSRP REM |
 | Dimensionality | 2D urban REM |
 | Artifact support | Dataset, trained-model support, and app/demo signals are visible through the Zenodo/OpenAIRE-linked resource |
+| Ledger record IDs | `DREM-DATA`; `DREM-MODEL`; `DREM-DEMO` |
+| Availability status | `unclear-license` |
+| License / version | Canonical record check required; Zenodo record |
+| Last verified | 2026-07-18 |
+| Reproduction scope | Sparse REM data, baseline inference, and interactive inspection |
 | Recommended use | Sparse-measurement REM reconstruction and artifact-maturity comparison |
 | Caveat | Protocol comparability depends on the measurement sparsity, area split, and baseline configuration. |
 
@@ -18,7 +23,7 @@
 - Baseline configuration and metric implementation.
 - Whether trained models are used directly or retrained.
 
-## WCI Interpretation
+## Survey Interpretation
 
 DeepREM is one of the stronger examples of multi-dimensional artifact support in
 this domain. It is useful for demonstrating why dataset, model, and demo support
