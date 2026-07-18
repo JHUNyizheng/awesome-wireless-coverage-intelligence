@@ -1,25 +1,24 @@
 ﻿# Companion Publication Readiness
 
-Generated: 2026-06-18 15:51:00
+Generated: 2026-07-18 15:52:00 CST
 
 | Metric | Value |
 |---|---:|
-| PASS | 6 |
-| REVIEW | 2 |
-| OPEN | 3 |
+| PASS | 9 |
+| REVIEW | 1 |
+| OPEN | 0 |
 
 | Status | Check | Detail |
 |---|---|---|
-| PASS | Git repository | Folder is a Git work tree. |
-| OPEN | Git user.name | Missing local Git user.name. |
-| OPEN | Git user.email | Missing local Git user.email. |
-| OPEN | Git remote | No remote configured. |
-| REVIEW | GitHub CLI | gh is not installed; use the manual GitHub remote workflow or install/authenticate gh before CreateRemoteWithGh. |
-| REVIEW | Git working tree | 13 uncommitted or untracked entries; this is expected before the initial commit. |
-| PASS | Required publication files | 16 required files found; publication/deferral decision record signals present. |
-| PASS | Resource structural check | PASS required_files=26 relative_links=38 resource_cards=11 resources/reproducibility_scorecard.csv=21 resources/publication_artifact_alignment.csv=18 resources/benchmark_performance_disclosure.csv=10 benchmark_result_card_signals=9 |
-| PASS | Public-link review | 19 public links; all automated checks OK. |
-| PASS | Publication helper dry-run | scripts/publish_to_github.ps1 completed a no-write dry run with placeholder owner and Git identity. |
-| PASS | Release bundle dry-run | scripts/build_release_bundle.ps1 produced and validated a local ZIP bundle for manual GitHub publication. |
+| PASS | Public repository | `JHUNyizheng/awesome-wireless-coverage-intelligence` is public and reachable. |
+| PASS | Default branch | `main` points to `87163754fa3f8daa1d8b8e1eeaeab006540b1bcb`. |
+| PASS | GitHub Actions | `resource-check #1` completed successfully in 30 s. |
+| PASS | Required publication files | 50 files published, including license, citation metadata, tutorials, resource tables, issue template, and workflow. |
+| PASS | Resource structural check | GitHub Actions accepted the repository structure; the local audit also found all required files and no missing relative links. |
+| PASS | Public-link review | 19 public links returned HTTP 200 in the 2026-07-18 release-time audit. |
+| PASS | Copyright boundary | No third-party PDFs, datasets, model weights, checkpoints, or full-code mirrors are distributed. |
+| PASS | Secret/privacy scan | No secret markers, absolute local paths, reviewer material, or private author intake files were found. |
+| PASS | Release bundle | The validated handoff bundle was used as the publication source; SHA256 `35e00f1602e9aa9026d49de95740e3db975258fd1a5e68b155b9764816c1c348`. |
+| REVIEW | Final citation metadata | `CITATION.cff` uses the team-level name until the complete manuscript author list and final bibliographic metadata are approved. |
 
-Interpretation: OPEN rows must be fixed before first GitHub publication. REVIEW rows need human release-time judgment but may be acceptable for an initial commit.
+Interpretation: the companion publication gate is closed. Final personal author and survey citation metadata remain a manuscript-team review item, not a repository-publication blocker.

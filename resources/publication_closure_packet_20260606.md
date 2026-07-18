@@ -2,6 +2,28 @@
 
 Generated for the WCI survey companion project on 2026-06-06.
 
+## Closure Decision Recorded 2026-07-18
+
+| Item | Recorded value |
+|---|---|
+| Decision | Publish before IEEE CST submission |
+| GitHub owner | `JHUNyizheng` |
+| Repository | <https://github.com/JHUNyizheng/awesome-wireless-coverage-intelligence> |
+| Visibility | Public |
+| Initial repository commit | `ecc04cc61b01f96fec155107b7de2cccd938a926` |
+| First complete resource-tree commit | `87163754fa3f8daa1d8b8e1eeaeab006540b1bcb` |
+| Default branch | `main` |
+| GitHub Actions | [`resource-check #1`](https://github.com/JHUNyizheng/awesome-wireless-coverage-intelligence/actions/runs/29636436306), successful, 30 s |
+| Source bundle SHA256 | `35e00f1602e9aa9026d49de95740e3db975258fd1a5e68b155b9764816c1c348` |
+| Maintainer account | `JHUNyizheng` |
+| Publication date | 2026-07-18 |
+
+The live repository contains the validated resource index and does not
+redistribute third-party papers, datasets, code mirrors, model weights, or
+private author/reviewer material. The companion publication gate is therefore
+closed. Personal author metadata in `CITATION.cff` remains intentionally
+team-level until the complete author list is approved.
+
 This packet defines the minimum evidence required to close the manuscript-side
 `Companion GitHub publication` gate. It is intentionally stricter than a local
 ZIP handoff: a release bundle proves that the materials can be shared, whereas
@@ -19,7 +41,7 @@ author-team deferral decision.
 | Benchmark-disclosure rows | `benchmark_performance_disclosure.csv`: 10 |
 | Benchmark result-card signals | 9 |
 | Release bundle | `dist/awesome-wireless-coverage-intelligence-release.zip` |
-| Publication decision | Pending until Git identity/remote or deferral evidence is supplied |
+| Publication decision | Closed by the public repository and successful GitHub Actions run recorded above |
 
 ## Closure Path A: Publish Before IEEE CST Submission
 

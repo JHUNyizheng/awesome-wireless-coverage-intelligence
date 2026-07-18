@@ -1,8 +1,13 @@
 # Publishing Guide
 
-This folder is already initialized as a local Git repository. A remote GitHub
-repository was not created automatically because this environment does not have
-the GitHub CLI (`gh`) installed and no GitHub account/token is configured.
+The companion resource index was published on 2026-07-18 at
+<https://github.com/JHUNyizheng/awesome-wireless-coverage-intelligence>.
+The first complete resource-tree commit is
+`87163754fa3f8daa1d8b8e1eeaeab006540b1bcb`; GitHub Actions run
+[`resource-check #1`](https://github.com/JHUNyizheng/awesome-wireless-coverage-intelligence/actions/runs/29636436306)
+completed successfully. The local environment used for release did not provide
+the GitHub CLI (`gh`), so repository creation and publication were performed
+through the authenticated GitHub web session and GitHub repository API.
 
 ## Option 0: Build A Local Release Bundle
 

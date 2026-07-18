@@ -1,10 +1,16 @@
 ﻿# Awesome Wireless Coverage Intelligence Release Bundle
 
-Generated: 2026-06-18 15:51:17
+Generated: 2026-06-18 15:51:17; publication status updated 2026-07-18
 
 This ZIP is a local, reviewable release bundle for the companion repository.
 It is intended for manual GitHub repository creation, maintainer review, or
 archival handoff when a GitHub remote is not yet configured.
+
+The reviewed contents were published at
+<https://github.com/JHUNyizheng/awesome-wireless-coverage-intelligence>.
+The first complete resource-tree commit is
+`87163754fa3f8daa1d8b8e1eeaeab006540b1bcb`, and GitHub Actions
+`resource-check #1` completed successfully.
 
 ## Intended GitHub Repository
 
